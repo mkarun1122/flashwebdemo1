@@ -1,6 +1,9 @@
-# test_app.py
 import unittest
 from app import app
 
-def test_app_exists():
-    assert app is not None
+class BasicTests(unittest.TestCase):
+    def test_app_exists(self):
+        self.assertIsNotNone(app)
+
+if __name__ == "__main__":
+    unittest.main()
